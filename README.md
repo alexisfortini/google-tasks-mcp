@@ -85,7 +85,7 @@ No real-account tests or destructive tests run in CI. A human operator may expli
 
 ### Validation status
 
-The preceding v0.3 server was exercised through a real private cloud connection against isolated lists: list/task creation, list rename, note clearing with an empty string, scheduled-date clearing with null, subtask creation, completion/reopening, promotion/reordering and native cross-list movement preserving task identity passed with readbacks. The note-clearing request also had its exact request ID confirmed in the durable journal. Destructive operations have mock coverage; live deletion and bulk hiding are not yet confirmed. This does not establish cloud invocation compatibility for the new v0.4 tool names: those pass SDK/mock tests and require deployment, connection refresh and fresh-conversation validation.
+The preceding v0.3 server was exercised through a real private cloud connection against isolated lists: list/task creation, list rename, note clearing with an empty string, scheduled-date clearing with null, subtask creation, completion/reopening, promotion/reordering and native cross-list movement preserving task identity passed with readbacks. The note-clearing request also had its exact request ID confirmed in the durable journal. After separate user confirmation and refreshed previews, bulk hiding of a synthetic completed task and deletion of a synthetic task passed: readbacks confirmed hidden status and an empty destination list. Live list deletion remains unverified. This does not establish cloud invocation compatibility for the new v0.4 tool names: those pass SDK/mock tests and require deployment, connection refresh and fresh-conversation validation.
 
 ## Licensing
 
